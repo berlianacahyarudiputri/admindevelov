@@ -6,15 +6,9 @@ import { showNotification } from '../../common/headerSlice'
 
 const TopSideButtons = () => {
 
-    const dispatch = useDispatch()
-
-    const addNewTeamMember = () => {
-        dispatch(showNotification({message : "Add New Member clicked", status : 1}))
-    }
-
     return(
         <div className="inline-block float-right">
-            <button className="btn px-6 btn-sm normal-case btn-primary" onClick={() => addNewTeamMember()}>Invite New</button>
+            <button className="btn px-6 btn-sm normal-case btn-primary" >Tambah Mentor</button>
         </div>
     )
 }
@@ -46,7 +40,7 @@ function Team(){
     return(
         <>
             
-            <TitleCard title="Mentor Aktif" topMargin="mt-2" TopSideButtons={<TopSideButtons />}>
+            <TitleCard title="Active Members" topMargin="mt-2" TopSideButtons={<TopSideButtons />}>
 
                 {/* Team Member list in table format loaded constant */}
             <div className="overflow-x-auto w-full">
