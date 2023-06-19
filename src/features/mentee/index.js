@@ -85,11 +85,11 @@ function Transactions(){
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Email </th>
+                        <th>Ussername </th>
                         <th>Password</th>
-                        <th>Ussername</th>
+                        <th>Email</th>
                         <th>Purpose</th>
-                        <th>Transaction Date</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -109,9 +109,10 @@ function Transactions(){
                                             </div>
                                         </div>
                                     </td>
+                                    <td>{l.username}</td>
+                                    <td>{l.password}</td>
                                     <td>{l.email}</td>
-                                    <td>{l.location}</td>
-                                    <td>${l.amount}</td>
+                                    <td>{l.purpose}</td>
                                     <td>{moment(l.date).format("D MMM")}</td>
                                     </tr>
                                 )

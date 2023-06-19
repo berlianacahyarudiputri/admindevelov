@@ -7,21 +7,18 @@ import { showNotification } from '../../common/headerSlice'
 
 
 const BILLS = [
-    {invoiceNo : "#4567", amount : "23,989", description : "Product usages", status : "Pending", generatedOn : moment(new Date()).add(-30*1, 'days').format("DD MMM YYYY"),  paidOn : "-"},
+    {no : "1", amount : "23,989", mentee : "Berliana Cahya R", status : "Pending", date : moment(new Date()).add(-30*1, 'days').format("DD MMM YYYY")},
 
-    {invoiceNo : "#4523", amount : "34,989", description : "Product usages", status : "Pending", generatedOn : moment(new Date()).add(-30*2, 'days').format("DD MMM YYYY"), paidOn : "-"},
+    {no : "2", amount : "34,989", mentee : "Adzkiyatun Nisa", status : "Pending", date : moment(new Date()).add(-30*2, 'days').format("DD MMM YYYY")},
 
-    {invoiceNo : "#4453", amount : "39,989", description : "Product usages", status : "Paid", generatedOn : moment(new Date()).add(-30*3, 'days').format("DD MMM YYYY"), paidOn : moment(new Date()).add(-24*2, 'days').format("DD MMM YYYY")},
+    {no : "3", amount : "39,989", mentee : "Fergiawan Listanto", status : "Paid", date : moment(new Date()).add(-30*3, 'days').format("DD MMM YYYY")},
 
-    {invoiceNo : "#4359", amount : "28,927", description : "Product usages", status : "Paid", generatedOn : moment(new Date()).add(-30*4, 'days').format("DD MMM YYYY"), paidOn : moment(new Date()).add(-24*3, 'days').format("DD MMM YYYY")},
+    {no : "4", amount : "28,927", mentee : "Andrian ", status : "Paid", date : moment(new Date()).add(-30*4, 'days').format("DD MMM YYYY")},
 
-    {invoiceNo : "#3359", amount : "28,927", description : "Product usages", status : "Paid", generatedOn : moment(new Date()).add(-30*5, 'days').format("DD MMM YYYY"), paidOn : moment(new Date()).add(-24*4, 'days').format("DD MMM YYYY")},
+    {no : "5", amount : "28,927", mentee : "Rafie Mukhti", status : "Paid", date : moment(new Date()).add(-30*5, 'days').format("DD MMM YYYY")},
 
-    {invoiceNo : "#3367", amount : "28,927", description : "Product usages", status : "Paid", generatedOn : moment(new Date()).add(-30*6, 'days').format("DD MMM YYYY"), paidOn : moment(new Date()).add(-24*5, 'days').format("DD MMM YYYY")},
+    {no : "6", amount : "28,927", mentee : "Khoerul Anwar", status : "Paid", date : moment(new Date()).add(-30*6, 'days').format("DD MMM YYYY")},
 
-    {invoiceNo : "#3359", amount : "28,927", description : "Product usages", status : "Paid", generatedOn : moment(new Date()).add(-30*7, 'days').format("DD MMM YYYY"), paidOn : moment(new Date()).add(-24*6, 'days').format("DD MMM YYYY")},
-
-    {invoiceNo : "#2359", amount : "28,927", description : "Product usages", status : "Paid", generatedOn : moment(new Date()).add(-30*8, 'days').format("DD MMM YYYY"), paidOn : moment(new Date()).add(-24*7, 'days').format("DD MMM YYYY")},
 
 
 ]
@@ -40,19 +37,18 @@ function Billing(){
     return(
         <>
             
-            <TitleCard title="Billing History" topMargin="mt-2">
+            <TitleCard title="Booking" topMargin="mt-2">
 
                 {/* Invoice list in table format loaded constant */}
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     <thead>
                     <tr>
-                        <th>Invoice No</th>
-                        <th>Invoice Generated On</th>
-                        <th>Description</th>
-                        <th>Amount</th>
+                        <th> No</th>
+                        <th>Date</th>
+                        <th>Mentee</th>
+                        <th>Mentor</th>
                         <th>Status</th>
-                        <th>Invoice Paid On</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -60,9 +56,9 @@ function Billing(){
                             bills.map((l, k) => {
                                 return(
                                     <tr key={k}>
-                                    <td>{l.invoiceNo}</td>
-                                    <td>{l.generatedOn}</td>
-                                    <td>{l.description}</td>
+                                    <td>{l.no}</td>
+                                    <td>{l.date}</td>
+                                    <td>{l.mentee}</td>
                                     <td>${l.amount}</td>
                                     <td>{getPaymentStatus(l.status)}</td>
                                     <td>{l.paidOn}</td>
