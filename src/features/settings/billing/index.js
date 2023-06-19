@@ -7,17 +7,17 @@ import { showNotification } from '../../common/headerSlice'
 
 
 const BILLS = [
-    {no : "1", amount : "23,989", mentee : "Berliana Cahya R", status : "Pending", date : moment(new Date()).add(-30*1, 'days').format("DD MMM YYYY")},
+    {mentor : "Sarif Hidayatullah", mentee : "Berliana Cahya R", status : "Pengajuan", date : moment(new Date()).add(-30*1, 'days').format("DD MMM YYYY")},
 
-    {no : "2", amount : "34,989", mentee : "Adzkiyatun Nisa", status : "Pending", date : moment(new Date()).add(-30*2, 'days').format("DD MMM YYYY")},
+    {mentor : "Jessica Aulia", mentee : "Adzkiyatun Nisa", status : "Dibatalkan", date : moment(new Date()).add(-30*2, 'days').format("DD MMM YYYY")},
 
-    {no : "3", amount : "39,989", mentee : "Fergiawan Listanto", status : "Paid", date : moment(new Date()).add(-30*3, 'days').format("DD MMM YYYY")},
+    {mentor : "Sarif Hidayatullah", mentee : "Fergiawan Listanto", status : "Selesai", date : moment(new Date()).add(-30*3, 'days').format("DD MMM YYYY")},
 
-    {no : "4", amount : "28,927", mentee : "Andrian ", status : "Paid", date : moment(new Date()).add(-30*4, 'days').format("DD MMM YYYY")},
+    {mentor : "Lauren", mentee : "Andrian ", status : "Selesai", date : moment(new Date()).add(-30*4, 'days').format("DD MMM YYYY")},
 
-    {no : "5", amount : "28,927", mentee : "Rafie Mukhti", status : "Paid", date : moment(new Date()).add(-30*5, 'days').format("DD MMM YYYY")},
+    {mentor : "Hasan Harahap", mentee : "Rafie Mukhti", status : "Selesai", date : moment(new Date()).add(-30*5, 'days').format("DD MMM YYYY")},
 
-    {no : "6", amount : "28,927", mentee : "Khoerul Anwar", status : "Paid", date : moment(new Date()).add(-30*6, 'days').format("DD MMM YYYY")},
+    {mentor : "Jessica Aulia", mentee : "Khoerul Anwar", status : "Selesai", date : moment(new Date()).add(-30*6, 'days').format("DD MMM YYYY")},
 
 
 
@@ -29,8 +29,9 @@ function Billing(){
     const [bills, setBills] = useState(BILLS)
 
     const getPaymentStatus = (status) => {
-        if(status  === "Paid")return <div className="badge badge-success">{status}</div>
-        if(status  === "Pending")return <div className="badge badge-primary">{status}</div>
+        if(status  === "Selesai")return <div className="badge badge-success">{status}</div>
+        if(status  === "Pengajuan")return <div className="badge badge-primary">{status}</div>
+        if(status  === "Dibatalkan")return <div className="badge badge-secondary">{status}</div>
         else return <div className="badge badge-ghost">{status}</div>
     }
 
@@ -44,7 +45,6 @@ function Billing(){
                 <table className="table w-full">
                     <thead>
                     <tr>
-                        <th> No</th>
                         <th>Date</th>
                         <th>Mentee</th>
                         <th>Mentor</th>
@@ -56,10 +56,9 @@ function Billing(){
                             bills.map((l, k) => {
                                 return(
                                     <tr key={k}>
-                                    <td>{l.no}</td>
                                     <td>{l.date}</td>
                                     <td>{l.mentee}</td>
-                                    <td>${l.amount}</td>
+                                    <td>{l.mentor}</td>
                                     <td>{getPaymentStatus(l.status)}</td>
                                     <td>{l.paidOn}</td>
                                     </tr>

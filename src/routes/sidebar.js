@@ -62,10 +62,14 @@ const routes = [
   },
   {
     path: '/app/mentee', // url
-    icon: <UserGroupIcon className={iconClasses}/>, // icon component
+    icon: <UsersIcon className={iconClasses}/>, // icon component
     name: 'Mentee', // name that appear in Sidebar
   },
-  
+  {
+    path: '/app/',
+    icon: <UserGroupIcon className={iconClasses}/>, 
+    name: 'Community',
+  },
 ]
 
 export default routes
