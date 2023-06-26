@@ -13,13 +13,8 @@ const TopSideButtons = () => {
 
 
 const TEAM_MEMBERS = [
-    {name : "Sarif Hidayatullah", avatar : "/sarif.jfif", email : "sarifh@gmail.com", status : "Aktif", role : "Adobe Illusrator"},
-    {name : "Jessica Aulia", avatar : "/aulia.jfif", email : "jes.aulia@gmail.com", status : "Aktif", role : "Adobe Premier" },
-    {name : "Reza", avatar : "/reza.jfif", email : "rezaa@gmail.com", status : "Aktif", role : "Adobe Firefly"},
-    {name : "Hasan Harahap", avatar : "/hasan.jfif", email : "hasanharap@gmail.com", status : "Aktif", role : "Photoshop"},
-    {name : "Lauren", avatar : "/lau.jfif", email : "lauren@gmail.com", status : "Aktif", role : "Figma"},
-
-
+    {name : "Sari Rahmawati", avatar : "/sari.jpg", email : "sari@gmail.com", status : "Aktif", role : "Adobe Illusrator"},
+    {name : "Fergiawan Listanto", avatar : "/egi.jfif", email : "egiii@gmail.com", status : "Aktif", role : "Adobe Premier" },
 ]
 
 function Team(){

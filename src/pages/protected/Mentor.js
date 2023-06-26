@@ -7,7 +7,7 @@ function InternalPage(){
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(setPageTitle({ title : "Mentor List"}))
+        dispatch(setPageTitle({ title : "Mentor"}))
       }, [])
 
 
