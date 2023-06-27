@@ -1,11 +1,7 @@
 import TitleCard from "../../../components/Cards/TitleCard";
 
 const userSourceData = [
-  { source: "Ningsih Cans telah berhasil melakukan pendaftaran mentor", count: "21/05/2023" },
-  { source: "Berliana telah berhasil melakukan pembayaran", count: "21/05/2023" },
-  { source: "Rafie telah mendaftar sebagai mentee", count: "21/05/2023" },
-  { source: "Aulia telah mengajukan cuti", count: "21/05/2023" },
-  { source: "John Smith telah mengupload sesuatu di community", count: "21/05/2023" },
+  
 ];
 
 function UserChannels() {
