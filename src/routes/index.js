@@ -20,6 +20,7 @@ const DocComponents = lazy(() => import('../pages/DocComponents'))
 const Mentee = lazy(() => import('../pages/protected/Mentee'))
 const Mentor = lazy(() => import('../pages/protected/Mentor'))
 const History = lazy(() => import('../pages/protected/History'))
+// const Community = lazy(() => import('../pages/protected/Community'))
 
 const routes = [
   {
@@ -43,7 +44,7 @@ const routes = [
     component: History,
   },
   {
-    path: '/calendar',
+    path: '/community',
     component: Calendar,
   },
   {

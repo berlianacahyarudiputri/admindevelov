@@ -3,16 +3,19 @@ import { useDispatch } from 'react-redux'
 import { setPageTitle } from '../../features/common/headerSlice'
 import Mentee from '../../features/mentee'
 
-function InternalPage(){
+function InternalPage() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(setPageTitle({ title : "Mentee"}))
-      }, [])
+        dispatch(setPageTitle({ title: "Mentee" }))
+    }, [])
 
 
-    return(
-        <Mentee />
+    return (
+        <div>
+            testtt
+            <Mentee />
+        </div>
     )
 }
 

@@ -66,7 +66,7 @@ const routes = [
     name: 'Mentee', // name that appear in Sidebar
   },
   {
-    path: '/app/',
+    path: '/app/community',
     icon: <UserGroupIcon className={iconClasses}/>, 
     name: 'Community',
   },
